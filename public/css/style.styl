@@ -1,0 +1,1089 @@
+bggray = rgb(77, 77, 77);
+bartitle = rgb(127, 127, 120);
+bgbtn = rgb(232, 92, 65);
+bgbtnalert = rgb(240, 173, 78);
+barcolor = rgb(239, 239, 235);
+
+@font-face 
+  font-family 'icons'
+  src url('../fonts/fontello.eot?13472084')
+  src url('../fonts/fontello.eot?13472084#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff?13472084') format('woff'),
+       url('../fonts/fontello.ttf?13472084') format('truetype'),
+       url('../fonts/fontello.svg?13472084#fontello') format('svg')
+  font-weight normal
+  font-style normal
+	
+.animate-spin 
+  -moz-animation spin 2s infinite linear
+  -o-animation spin 2s infinite linear
+  -webkit-animation spin 2s infinite linear
+  animation spin 2s infinite linear
+  display inline-block
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.close
+	&:before
+		font-family icons
+		content '\e811'
+		cursor pointer
+		position absolute
+		right 5%
+.close:hover
+	color white
+body
+	font-family 'Arial','Helvetica',sans-serif
+	font-size 75%
+	background darken(white,1.5%)
+	min-width 625px
+	width 100%
+
+	.button
+	.title
+		background bggray
+		height 15px
+		height 20px
+		padding 1em 0
+		position fixed
+		text-align center
+		top 0
+		width 100%
+		z-index 100
+		font-weight 100
+		
+	.title
+		color white
+		
+		span
+			padding 0 2em 0 0
+		
+		label 
+			padding 0 .5em 0 0
+			text-transform uppercase
+			
+	.w-alert
+		position fixed
+		top 25%
+		left 25%
+		z-index 99
+		width 50%
+		
+		article
+			background white
+			-webkit-box-shadow 1px 2px 5px bgbtnalert
+			-moz-box-shadow 1px 2px 5px bgbtnalert
+			box-shadow 1px 2px 5px darken(bgbtnalert,50%)
+			border 1px solid darken(bgbtnalert,25%)
+			
+			.alert-title
+				background bgbtnalert
+				padding 1em
+				color rgb(255, 255, 255)
+				text-align center
+				
+				#remove-close:hover
+					color barcolor
+					
+			.content
+				padding 1em 1em 1.5em
+				text-align center
+				
+				.message
+					display block
+					position relative
+				
+				.btn
+					-moz-border-radius 5px
+					-webkit-border-radius 5px
+					background white
+					border 1px solid bgbtnalert
+					border-radius 5px
+					bottom 1.4em
+					color darken(bgbtnalert,25%)
+					display inline-block
+					padding .8em 2em
+					position relative
+					top 1em
+					
+					&:hover
+						background bgbtnalert
+						color white
+					
+					&.accept
+						border none
+						background bgbtnalert
+						color white
+						position relative
+						
+						&:hover
+							background darken(bgbtnalert,25%)
+	
+	.w-edit
+		.content
+			.new-block
+				.menu-toggle
+					margin-top 4em
+					-moz-transition right .35s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+					-o-transition right .35s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+					-webkit-transition right .35s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+					background white
+					border 1px solid lighten(black,70%)
+					border-bottom-left-radius 5px
+					border-right none
+					border-top-left-radius 5px
+					-webkit-box-shadow -1px 0 2px lighten(black,80%)
+					-moz-box-shadow -1px 0 2px lighten(black,80%)
+					box-shadow -1px 0 2px lighten(black,80%)
+					height 40px
+					position fixed
+					right 0
+					transition right .35s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+					width 40px
+					z-index 9
+				
+					.line-1
+						-moz-transform rotate(40deg) translate(0,-7px)
+						-ms-transform rotate(40deg) translate(0,-7px)
+						-o-transform rotate(40deg) translate(0,-7px)
+						-webkit-transform rotate(40deg) translate(0,-7px)
+						transform rotate(40deg) translate(0,-7px)	
+						
+					.line-2
+						-moz-transform rotate(-40deg) translate(0,7px)
+						-ms-transform rotate(-40deg) translate(0,7px)
+						-o-transform rotate(-40deg) translate(0,7px)
+						-webkit-transform rotate(-40deg) translate(0,7px)
+						transform rotate(-40deg) translate(0,7px)
+
+					b
+						-moz-transform-origin 50%
+						-moz-transition all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+						-ms-transform-origin 50%
+						-o-transform-origin 50%
+						-o-transition all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+						-webkit-transform-origin 50%
+						-webkit-transition all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+						background lighten(black,30%)
+						height 2px
+						left 0
+						margin -2px 10px 0
+						position absolute
+						top 50%
+						transform-origin 50%
+						transition all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+						width 40%
+						-webkit-border-radius 50px
+						-moz-border-radius 50px
+						border-radius 50px
+		
+					&.menu-open
+						right 50%
+			
+						.line-1
+							-moz-transform rotate(-40deg) translate(0,-7px)
+							-ms-transform rotate(-40deg) translate(0,-7px)
+							-o-transform rotate(-40deg) translate(0,-7px)
+							-webkit-transform rotate(-40deg) translate(0,-7px)
+							transform rotate(-40deg) translate(0,-7px)	
+									
+						.line-2
+							-moz-transform rotate(40deg) translate(0,7px)
+							-ms-transform rotate(40deg) translate(0,7px)
+							-o-transform rotate(40deg) translate(0,7px)
+							-webkit-transform rotate(40deg) translate(0,7px)
+							transform rotate(40deg) translate(0,7px)
+						
+						b
+							margin -2px 15px 0
+
+				.edit
+					position fixed
+					right 0
+					list-style none
+					width 0
+					height 84.5%
+					background white
+					top 0
+					margin 0
+					padding 4em 0 0
+					text-align center
+					-webkit-box-shadow 0px 0 5px lighten(black,80%)
+					-moz-box-shadow 0px 0 5px lighten(black,80%)
+					box-shadow 0px 0 5px lighten(black,80%)
+					border-left 1px solid lighten(black,70%)
+					-webkit-transition width .5s 
+					-moz-transition width .5s 
+					-o-transition width .5s 
+					transition width .5s
+					overflow scroll
+					z-index 9
+		
+					&.open
+						width 50%
+						max-width 426px
+			#img
+			#browser-img
+			#text
+				-moz-box-shadow 0 0 5px bartitle
+				-webkit-box-shadow 0 0 5px bartitle
+				background white
+				border 1px solid bartitle
+				box-shadow 0 0 5px bartitle     	
+				height auto
+				position fixed
+				right 12.5%
+				top 8%
+				width 580px
+				z-index 10
+				
+				.update
+				.edit-title
+					background bartitle
+					color barcolor
+					padding 1em .5em
+
+				.content
+					.edit-box
+						padding 1em 0
+						border-bottom 1px solid lighten(bartitle,60%)
+					.edit-tags
+						text-align center
+							
+						.edit-title 
+							padding 1em
+							color darken(barcolor,80%)
+							display block
+							background none
+							text-align left
+							font-weight 100
+							
+						.section
+							padding-right 5px
+							display inline-block
+							margin-bottom 1em
+							
+							&:last-child
+								border none
+								
+							&:nth-child(3)
+								select
+									width 208px
+								
+							span
+								display block
+								line-height 2em
+								text-align left
+								color lighten(black,20%)
+							
+							select
+								border-radius 3.5px
+								-webkit-border-radius 3.5px
+								-moz-border-radius 3.5px
+								-webkit-border-radius 3.5px
+								height 2em
+								padding 0 3.5em 0 .5em
+								border 1px solid lighten(bartitle,50%)
+								-webkit-appearance none 
+								appearance none
+								-moz-appearance none
+								background: rgb(242, 242, 242) url("http://i62.tinypic.com/15xvbd5.png") no-repeat 95% -5px
+					.edit-buttons
+						text-align center
+						
+						.section
+							display inline-block
+							padding-right 5px
+							margin .5em 0
+							
+							.font-size
+							.font-family
+								width 100px
+								height 25px
+								border 1px solid darken(white,20%)
+								border-radius 5px
+								background darken(white,5%)
+								
+								&:after
+									content '|'
+									text-align left
+									width 15px
+									padding-left 5px
+									height 15px
+									display inline-block
+									background #f2f2f2 url("http://i62.tinypic.com/15xvbd5.png") no-repeat right -9px
+									color darken(white,20%)
+									float right
+									
+							#font-size-options		
+							#font-family-options
+								background darken(white,5%)
+								border 1px solid darken(white,20%)
+								border-radius 5px
+								list-style none
+								margin 0
+								padding 0
+								position absolute
+								width 100px
+								z-index 10
+								
+								button
+									border none
+									background transparent
+									padding .5em
+									width 100%
+									
+									&:hover
+										background darken(white,20%)
+							
+							#font-size-options		
+							.font-size
+								width 50px	
+								
+								
+							.bold
+							.italic
+							.underline
+							.font-color
+							.text-left
+							.text-center
+							.text-right
+							.link
+							.unlink
+							.horizontal-line
+								font-family icons
+								cursor pointer
+								padding .5em
+								margin 0 .5em
+								color lighten(black,30%)
+								display inline-block
+								border 1px solid transparent
+								background white
+								border-radius 5px
+								
+								&:hover
+									background darken(white,15%)
+								
+							.bold
+								&:before
+									content '\e809'
+									
+							.italic
+								&:before
+									content '\e808'
+							
+							.underline
+								&:before
+									content '\e810'
+									
+							.font-color
+								&:before
+									content '\e80b'
+									color darken(red,30%)
+									
+							.text-left
+								&:before
+									content '\e803'
+							
+							.text-center
+								&:before
+									content '\e806'
+							
+							.text-right
+								&:before
+									content '\e807'
+							.link
+								&:before
+									content '\e812'
+							.unlink
+								&:before
+									content '\e813'	
+							.horizontal-line
+								&:before
+									content '__'	
+							.colors
+								position fixed
+								width 160px
+								border 1px solid darken(white,20%)
+								background darken(white,5%)
+								padding .5em
+								border-radius 5px
+								
+								.color
+									border none
+									width 15px
+									height 15px
+									margin .25em 0
+									border-radius 5px
+									border 1px solid darken(white,20%)
+									
+								.color-1
+									background #ffffff
+								.color-2
+									background #000000
+								.color-3
+									background #eeece1
+								.color-4
+									background #1f497d
+								.color-5
+									background #4f81bd
+								.color-6
+									background #c0504d
+								.color-7
+									background #9bbb59
+								.color-8
+									background #8064a2
+								.color-9
+									background #4bacc6
+								.color-10
+									background #f79646
+								.color-11
+									background #f2f2f2
+								.color-12
+									background #7f7f7f
+								.color-13
+									background #ddd9c3
+								.color-14
+									background #c6d9f0
+								.color-15
+									background #dbe5f1
+								.color-16
+									background #f2dcdb
+								.color-17
+									background #ebf1dd
+								.color-18
+									background #e5e0ec
+								.color-19
+									background #dbeef3
+								.color-20
+									background #fdeada
+								.color-21
+									background #d8d8d8
+								.color-22
+									background #595959
+								.color-23
+									background #c4bd97
+								.color-24
+									background #8db3e2
+								.color-25
+									background #b8cce4
+								.color-26
+									background #e5b9b7
+								.color-27
+									background #d7e3bc
+								.color-28
+									background #ccc1d9
+								.color-29
+									background #b7dde8
+								.color-30
+									background #fbd5b5
+								.color-31
+									background #bfbfbf
+								.color-32
+									background #3f3f3f
+								.color-33
+									background #938953
+								.color-34
+									background #548dd4
+								.color-35
+									background #95b3d7
+								.color-36
+									background #d99694
+								.color-37
+									background #c3d69b
+								.color-38
+									background #b2a2c7
+								.color-39
+									background #92cddc
+								.color-40
+									background #fac08f
+								.color-41
+									background #a5a5a5
+								.color-42
+									background #262626
+								.color-43
+									background #494429
+								.color-44
+									background #17365d
+								.color-45
+									background #366092
+								.color-46
+									background #953734
+								.color-47
+									background #76923c
+								.color-48
+									background #5f497a
+								.color-49
+									background #31859b
+								.color-50
+									background #e36c09
+								.color-51
+									background #7f7f7f
+								.color-52
+									background #0c0c0c
+								.color-53
+									background #1d1b10
+								.color-54
+									background #0f243e
+								.color-55
+									background #244061
+								.color-56
+									background #632423
+								.color-57
+									background #4f6128
+								.color-58
+									background #3f3151
+								.color-59
+									background #205867
+								.color-60
+									background #974806
+								.color-61
+									background #c00000
+								.color-62
+									background #ff0000
+								.color-63
+									background #ffc000
+								.color-64
+									background #ffff00
+								.color-65
+									background #92d050
+								.color-66
+									background #00b050
+								.color-67
+									background #00b0f0
+								.color-68
+									background #0070c0
+								.color-69
+									background #002060
+								.color-69
+									background #7030a0
+								
+						select
+							border-radius 3.5px
+							-webkit-border-radius 3.5px
+							-moz-border-radius 3.5px
+							-webkit-border-radius 3.5px
+							height 2em
+							padding 0 3.5em 0 .5em
+							-webkit-appearance none 
+							appearance none
+							-moz-appearance none
+							background: rgb(242, 242, 242) url("http://i62.tinypic.com/15xvbd5.png") no-repeat 95% -5px
+					.edit-text
+						height 235px
+						padding .5em
+						.content
+							height 235px
+							overflow scroll
+					.update
+						.btn-update
+							display block
+							margin auto
+							width 100px
+							border-radius 5px
+							text-align center
+							color white
+							background bgbtn
+							border 1px solid bgbtn
+							padding .5em 1em
+							cursor pointer
+							
+							&:hover
+								background darken(bgbtn,15%)
+								
+			#img
+				height auto
+				width 300px
+				right 25%
+				top 20.5%
+				
+				#edit-img-close
+					position absolute
+					right 5%
+				
+				.section
+					
+					span
+						text-align center !important
+						
+					.img-big
+					.img-medium	
+					.img-small	
+					.img-xsmall
+					.img-left
+					.img-center
+					.img-right
+					.img-top
+					.img-sub
+						width 50px
+						height 50px
+						padding 0
+						border-radius 2.5px
+						background rgb(252, 252, 252)
+						color rgb(98, 98, 98)
+						border 1px solid rgb(205, 205, 205)
+						box-shadow 0 1px 0 rgb(205, 205, 205)
+						
+						&:before
+							font-size 1em
+							font-family icons
+						
+					.img-xsmall	
+						&:before
+							content '\e80f'
+					
+					.img-small	
+						&:before
+							font-size 1.8em
+							content '\e80f'
+					
+					.img-medium	
+						&:before
+							font-size 2.5em
+							content '\e80f'
+					
+					.img-big	
+						&:before
+							font-size 3.5em
+							content '\e80f'
+					.img-left
+						&:before
+							float left
+							content '\e80f'
+					.img-center
+						&:before
+							float right
+							margin 0 35% 0 0 
+							content '\e80f'
+					.img-right
+						&:before
+							float right
+							content '\e80f'
+							
+					.img-top
+						&:before
+							float right
+							margin 0 35% 70% 0 
+							content '\e80f'
+					.img-sub
+						&:before
+							float right
+							margin 70% 35% 0 0 
+							content '\e80f'
+			#browser-img
+				width 400px
+				height 520px
+				left 25%
+				top 8%
+				
+				.browser-title
+					background bartitle
+					color barcolor
+					padding 1em .5em
+					
+				.browser-form
+					display block
+					margin 1em
+					text-align left
+					border-bottom 1px solid lighten(bartitle,25%)
+				
+					#fileform
+						position relative
+						overflow hidden
+						margin 0 10px
+						display inline-block
+						vertical-align top
+						background bgbtn
+						padding .5em 1em
+						color white
+						border 1px solid bgbtn
+						width 70px
+						border-radius 5px
+						
+						&:hover
+							background darken(bgbtn,25%)
+							
+						input.btn-file
+							position absolute
+							top 0
+							right 0
+							margin 0
+							padding 0
+							font-size 20px
+							cursor pointer
+							opacity 0
+							
+					#browser-file-name
+						display inline-block
+						vertical-align top
+						padding .5em
+					
+					.btn-info
+						margin 1em
+						background white
+						display block
+						padding .5em 1em
+						border-radius 5px
+						color bgbtn
+						border 1px solid bgbtn
+					
+					.browser-load
+						position relative
+						top -2.6em
+						left 7em
+						
+						&:before
+							font-family icons
+							content '\e814'
+				
+				.brower-content
+					width 94%
+					display block
+					margin 1em
+					text-align left
+					border-bottom 1px solid lighten(bartitle,25%)
+					
+					.browser-content-img
+						width 380px
+						height 300px
+						margin auto
+						overflow scroll
+						
+						.brower-img-content
+							width 100px
+							height 100px
+							overflow hidden
+							float left
+							margin 1em
+							line-height 90px
+							display block
+				#add-img
+					background bgbtn
+					display block
+					padding .6em 1em
+					font-weight 100
+					color white
+					border 1px solid bgbtn
+					margin auto
+					border-radius 5px
+	ul
+		.box
+			-moz-border-radius 5px
+			-moz-box-shadow 0 1px 5px lighten(black,60%)
+			-webkit-border-radius 5px
+			-webkit-box-shadow 0 1px 5px lighten(black,60%)
+			background white
+			border-radius 5px
+			box-shadow 0 1px 5px lighten(black,60%)
+			color lighten(black,40%)
+			display inline-block
+			font-family 'icons'
+			font-size 1.8em
+			height 120px
+			margin .5em
+			text-align center
+			width 114px
+			z-index 9
+			
+			&:before
+			&:after
+				top 35%
+				position relative
+			
+			&.text-1
+				&:before
+					content '\e80e'
+			&.text-2
+				&:before
+					content '\e80e  \e80e'
+			&.text-3
+				&:before
+					content '\e80e  \e80e  \e80e'
+			&.img-1
+				&:before
+					content '\e80f'
+			&.img-2
+				&:before
+					content '\e80f  \e80f'
+			&.img-3
+				&:before
+					content '\e80f  \e80f  \e80f'
+			&.text-1-img-1
+				&:before
+					content '\e80e  \e80f'
+			&.text-2-img-1
+				&:before
+					content '\e80e  \e80e  \e80f'
+			&.img-2-text-1
+				&:before
+					content '\e80f  \e80f  \e80e'
+			&.img-1-text-1
+				&:before
+					content '\e80f  \e80e'
+			&.img-1-text-2
+				&:before
+					content '\e80f  \e80e  \e80e'
+			&.text-1-img-2
+				&:before
+					content '\e80e  \e80f  \e80f'
+			&.text-1-img-1-text-1
+				&:before
+					content '\e80e  \e80f  \e80e'
+			&.img-1-text-1-img-1
+				&:before
+					content '\e80f  \e80e  \e80f'
+			&.img-1-text-1-big
+				&:before
+					right 10px
+					content '\e80f'
+			&.text-big-1-img-1
+				&:before
+					right 10px
+					content '\e80e'
+					display inline-block
+					-ms-transform scaleX(2)
+					-webkit-transform scaleX(2)
+					transform scaleX(2)
+			&.img-1-text-1-big
+				&:after
+					left 5px
+					content '\e80e'
+					display inline-block
+					-ms-transform scaleX(2)
+					-webkit-transform scaleX(2)
+					transform scaleX(2)
+			&.text-big-1-img-1
+				&:after
+					left 5px
+					content '\e80f'
+	.buttons
+		.contain
+			display none
+		
+	.template
+		background rgb(232, 232, 224)
+		height 90%
+		padding 5% 0
+		.ready
+			.ui-sortable
+				position relative
+				background white
+				min-width 600px
+				max-width 600px
+				width 600px
+				margin 2em auto 15em 
+				list-style none
+				padding 0
+		
+				.columns
+					background white
+					padding 1em 0
+					overflow hidden
+					
+					.bar-controls
+						height 20px
+						top -1em
+						width 100%
+						padding 10px 0px
+						position relative
+						color white
+						background rgb(63, 63, 63)
+						
+						.control-plus
+						.control-move
+						.control-trash
+						.control-reload
+							color darken(white,5%)
+							position absolute
+							top 15px
+							font-family 'icons'
+							text-decoration none
+							
+						.control-move
+							left 2.5%
+							cursor move
+							
+							&:before
+								content '\e800'
+								
+						.control-plus
+							right 15%
+							
+							&:before
+								content '\e805'
+						
+						.control-trash
+							right 5%
+							
+							&:before
+								content '\e80c'
+						.control-reload
+							right 10%
+							
+							&:before
+								content '\e80d'
+					.img
+					.text
+						.edit-img
+						.edit-text
+							position relative
+							margin 0 0 0 auto
+							font-size 14px
+							width 50px
+							height 35px
+							background rgb(63, 63, 63)
+							top -1em
+							
+							.icon-edit
+								&:before
+									font-family icons
+									content '\e802'
+									position absolute
+									right 35%
+									color white
+									top 25%
+									cursor pointer
+									
+						.edit-img
+							width 90px
+							
+							.icon-browser
+								&:before
+									font-family icons
+									content '\e801'
+									position absolute
+									right 30%
+									color rgb(255, 255, 255)
+									top 25%
+									cursor pointer
+										
+							.icon-edit
+								&:before
+									right 65%
+	.button
+		top inherit
+		bottom 0
+		padding-top 25px
+
+		.btn
+			padding .8em 2em
+			margin 0 .5em
+			-webkit-border-radius 5px
+			-moz-border-radius 5px
+			border-radius 5px
+			position relative
+			bottom 1.4em
+			background white
+			border 1px solid bgbtn
+			color darken(bgbtn,35%)
+			
+			&:hover
+				background bgbtn
+				color white
+				
+			&.save-document
+				border 1px solid bgbtn
+				background bgbtn
+				color white
+				
+				&:hover
+					background darken(bgbtn,15%)
+				
+@media screen and (min-width: 852px)
+	body 
+		.w-edit 
+			.content 
+				.new-block 
+					.menu-toggle.menu-open
+						right 426px
+@media screen and (min-width: 1024px)
+	body
+		.w-edit
+			.content
+				.new-block				
+					.menu-toggle
+						display none
+						
+					.edit
+						width 40%
+						&.open
+							width 40%
+		.template
+			width 60%
+		
+		.w-alert
+			width 25%
+					
